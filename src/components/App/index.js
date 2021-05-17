@@ -8,6 +8,9 @@ import Joke from 'src/components/Joke';
 // == Composant
 const App = () => {
   const [dadName, setDadName] = useState('Alexandre');
+  // const [joke, setJoke] = useState("blague");
+  const [joke, setJoke] = useState(null);
+
 
   return (
     <div>
@@ -20,7 +23,7 @@ const App = () => {
       <JokeButton />
       <Joke
         dadName={dadName}
-        joke="Did you hear about the cheese factory that exploded in France? There was nothing left but de Brie."
+        joke={joke}
       />
     </div>
   );
