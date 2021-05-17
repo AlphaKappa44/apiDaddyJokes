@@ -29,10 +29,16 @@ const App = () => {
     });
   };
 
-  // useEffect avec un tableau vide : appelé au chargement initial du composant.
+  // useEffect avec un tableau vide : appelé au chargement initial du composant App
   useEffect(() => {
-    
+    getJokeFromApi();
   }, []); // 2eme param : le tableau de dépendances
+
+  // useEffect avec une dépendance : appelé lorsque une variable change
+  // ici, on appelle la fonction, quand la variable "dadName" change.
+  useEffect(() => {
+    getJokeFromApi();
+  }, [dadName]); // 2eme param : le tableau de dépendances
 
   return (
     <div>
@@ -58,4 +64,3 @@ const App = () => {
 
 // == Export
 export default App;
-
