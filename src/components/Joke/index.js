@@ -1,10 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Joke = () => (
+const Joke = ({ dadName, joke }) => (
   <div>
-    <span>Bertrand :</span>
-    Did you hear about the cheese who saved the world? It was Legend-dairy!
+    <span>{dadName} :</span>
+    {joke}
   </div>
 );
+
+Joke.propTypes = {
+  dadName: PropTypes.string.isRequired,
+  joke: PropTypes.string.isRequired,
+};
 
 export default Joke;
