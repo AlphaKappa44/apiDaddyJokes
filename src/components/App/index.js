@@ -1,5 +1,5 @@
 // == Import npm
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Form from 'src/components/Form';
 import JokeButton from 'src/components/JokeButton';
@@ -13,6 +13,27 @@ const App = () => {
   // state qui contient la blague
   const [joke, setJoke] = useState('');
 
+  // une fonction pour faire la requete
+  const getJokeFromApi = () => {
+    axios.get('https://icanhazdadjoke.com/',
+      {
+        headers: {
+          // je veux récupérer ma blague en JSON et pas en HTML ->
+          // je dois donc le dire à l'API. Faites pas attention :)
+          Accept: 'application/json',
+        },
+      }).then((response) => {
+      // lorsque je récupère ma blague
+      // je n'ai plus qu'a la ranger dans mon state
+      setJoke(response.data.joke);
+    });
+  };
+
+  // useEffect avec un tableau vide : appelé au chargement initial du composant.
+  useEffect(() => {
+    
+  }, []); // 2eme param : le tableau de dépendances
+
   return (
     <div>
       <Form
@@ -22,18 +43,7 @@ const App = () => {
         }}
       />
       <JokeButton
-        requestJoke={() => {
-          axios.get('https://icanhazdadjoke.com/', {
-            headers: {
-              // je veux récupérer ma blague en JSON et pas en HTML ->
-              // je dois donc le dire à l'API. Faites pas attention :)
-              Accept: 'application/json',
-            },
-          }).then((response) => {
-            console.log('réponse : ', response);
-            setJoke(response.data.joke);
-          });
-        }}
+        requestJoke={getJokeFromApi}
       />
       {/* Si la blague est définie, je l'affiche */}
       {joke && (
@@ -48,3 +58,4 @@ const App = () => {
 
 // == Export
 export default App;
+
