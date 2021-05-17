@@ -7,10 +7,10 @@ import Joke from 'src/components/Joke';
 
 // == Composant
 const App = () => {
-  const [dadName, setDadName] = useState('Alexandre');
-  // const [joke, setJoke] = useState("blague");
-  const [joke, setJoke] = useState(null);
-
+  // state qui contient le prénom de notre papa
+  const [dadName, setDadName] = useState('');
+  // state qui contient la blague
+  const [joke, setJoke] = useState('');
 
   return (
     <div>
@@ -20,11 +20,18 @@ const App = () => {
           setDadName(event.target.value);
         }}
       />
-      <JokeButton />
-      <Joke
-        dadName={dadName}
-        joke={joke}
+      <JokeButton
+        requestJoke={() => {
+          setJoke("C'est l'histoire du ptit dej, tu la connais ? Pas de bol.");
+        }}
       />
+      {/* Si la blague est définie, je l'affiche */}
+      {joke && (
+        <Joke
+          dadName={dadName}
+          joke={joke}
+        />
+      )}
     </div>
   );
 };
