@@ -3,6 +3,7 @@
 
 body {
   font-family:'Roboto',sans-serif;
+  background-color:rgb(58, 133, 144, 0.05);
   font-family: sans-serif;
   display:flex;
   flex-wrap: nowrap;
@@ -21,27 +22,42 @@ body {
 }
 
 .form {
+  background-color:rgb(255, 255, 255);
   display:flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around
+  justify-content: space-around;
+  padding: 40px 30px;
+  margin: 40px ;
+  border: 0.1px solid #3a8590;
+  border-radius: 10px;
+  
 
 }
 
-.joke-button{
-    display:inline-block;
-    padding:0.35em 1.2em;
-    border: 0.1px solid #3a8590;
-    border-radius: 3px;
-    margin:0 0.3em 0.3em 0;
+.form:hover {
+  box-shadow: 1px 3px 5px rgb(58, 133, 144, 0.8);
 
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#3a8590;
-    text-align:center;
-    transition: all 0.2s;
+  background-color:rgb(58, 133, 144, 0.1);
+  color:#3a8590;
+  border-bottom: 1px solid #ff0202;
+  border-radius: 50px;
+}
+
+.joke-button{
+  background-color:rgb(58, 133, 144, 0.1);
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border: 0.1px solid #3a8590;
+  border-radius: 3px;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#3a8590;
+  text-align:center;
+  transition: all 0.2s;
   }
 
   
@@ -57,7 +73,7 @@ body {
   }
 
   .input {
-    background-color:#ffff;
+    background-color:rgb(58, 133, 144, 0.1);
     color:#3a8590;
     padding: 10px 16px;
     margin: 20px 0;
@@ -67,10 +83,10 @@ body {
   }
 
   .input:hover {
+    background-color:#ffff;
     box-shadow: 1px 3px 5px rgb(58, 133, 144, 0.8);
     padding: 20px 26px;
     margin: 30px 10px;
-    background-color:rgb(58, 133, 144, 0.1);
     color:#3a8590;
     border-bottom: 1px solid #ff0202;
     border-radius:0.12em;
@@ -80,13 +96,14 @@ body {
 
 
   .joke-container {
+    background-color:rgb(58, 133, 144, 0.1);
+    color:#3a8590;
     display: flex;
     align-items: center;
     width: 60vw;
     height: 20vh;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-    background-color:rgb(58, 133, 144);
-    color:#ffffff;
+
     padding: 10px 16px;
     margin: 20px 0;
     border-radius: 10px;
@@ -94,9 +111,9 @@ body {
   }
   .joke-container:hover {
     box-shadow: 1px 3px 5px rgb(58, 133, 144, 0.8);
-
-    background-color:rgb(58, 133, 144, 0.1);
-    color:#3a8590;
+    background-color:rgb(58, 133, 144);
+    color:#ffffff;
+    
     border-bottom: 1px solid #ff0202;
     border-radius: 50px;
   }
