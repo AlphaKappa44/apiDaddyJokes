@@ -1,6 +1,6 @@
 // == Import npm
 import React, { useEffect, useState } from 'react';
-
+import '../../styles/index.scss';
 import Form from 'src/components/Form';
 import JokeButton from 'src/components/JokeButton';
 import Joke from 'src/components/Joke';
@@ -41,7 +41,9 @@ const App = () => {
   }, [dadName]); // 2eme param : le tableau de dépendances
 
   return (
-    <div>
+
+    <div className="form">
+      <h1 className="title"> DADDY's CRAPPY JOKES</h1>
       <Form
         dadName={dadName}
         onInputChange={(event) => {

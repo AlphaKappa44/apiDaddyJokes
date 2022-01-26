@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../styles/index.scss';
 
 const Joke = ({ dadName, joke }) => (
-  <div>
-    <span>{dadName} :</span>
+  <div className="joke-container">
+    <h2> {dadName}  </h2>
+    <span> 👉🏻 👉🏿 </span>
     {joke}
+    <span> 🤡 🤦🏽‍♀️ </span>
   </div>
 );
 

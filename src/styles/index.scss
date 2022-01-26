@@ -2,9 +2,109 @@
 @use 'vars';
 
 body {
+  font-family:'Roboto',sans-serif;
   font-family: sans-serif;
+  display:flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 90vh;
+  width: 90vw;
 }
 
+#root {
+  display : flex;
+
+  
+
+}
+
+.form {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around
+
+}
+
+.joke-button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border: 0.1px solid #3a8590;
+    border-radius: 3px;
+    margin:0 0.3em 0.3em 0;
+
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#3a8590;
+    text-align:center;
+    transition: all 0.2s;
+  }
+
+  
+  .joke-button:hover{
+    color:#3a8590;
+    border: 1px solid #3a8590;
+    background-color:#FFFFFF;
+    padding: 40px 16px;
+    margin: 50px 0;
+    border-bottom: 1px solid #f30606;
+    border-radius: 50px;
+
+  }
+
+  .input {
+    background-color:#ffff;
+    color:#3a8590;
+    padding: 10px 16px;
+    margin: 20px 0;
+    border: 1px solid rgb(58, 133, 144, 0.8);
+    border-radius: 3px;
+    
+  }
+
+  .input:hover {
+    box-shadow: 1px 3px 5px rgb(58, 133, 144, 0.8);
+    padding: 20px 26px;
+    margin: 30px 10px;
+    background-color:rgb(58, 133, 144, 0.1);
+    color:#3a8590;
+    border-bottom: 1px solid #ff0202;
+    border-radius:0.12em;
+    border-radius: 50px;
+  }
+
+
+
+  .joke-container {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    height: 20vh;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    background-color:rgb(58, 133, 144);
+    color:#ffffff;
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-radius: 10px;
+    
+  }
+  .joke-container:hover {
+    box-shadow: 1px 3px 5px rgb(58, 133, 144, 0.8);
+
+    background-color:rgb(58, 133, 144, 0.1);
+    color:#3a8590;
+    border-bottom: 1px solid #ff0202;
+    border-radius: 50px;
+  }
+
+span {
+  padding: 10px 16px;
+  margin: 20px 0;
+}
 /* 
   // or you can import your own font
   @font-face {

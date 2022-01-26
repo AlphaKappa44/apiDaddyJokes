@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './form.scss';
+import '../../styles/index.scss';
 
 const Form = ({ dadName, onInputChange }) => (
   <input
     className="input"
     type="text"
-    placeholder="Nom de votre papa"
+    placeholder="🤘🏼 Your Daddy's name here 🥸💬🤘🏾"
     value={dadName}
     onChange={onInputChange}
   />
